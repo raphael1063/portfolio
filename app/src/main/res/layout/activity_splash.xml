@@ -3,6 +3,9 @@
 
     <data>
 
+        <variable
+            name="vm"
+            type="com.robin1.portfolio.ui.splash.SplashViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

@@ -12,6 +12,9 @@ class HomeActivity : BaseActivity<ActivityHomeBinding, HomeViewModel>(
     }
 
     override fun setBinding() {
+        binding.apply {
+            vm = viewModel
+        }
     }
 
     override fun onObserve() {

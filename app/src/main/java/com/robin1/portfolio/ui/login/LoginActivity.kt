@@ -12,6 +12,9 @@ class LoginActivity : BaseActivity<ActivityLoginBinding, LoginViewModel>(
     }
 
     override fun setBinding() {
+        binding.apply {
+            vm = viewModel
+        }
     }
 
     override fun onObserve() {

@@ -14,7 +14,7 @@ abstract class BaseActivity<VB : ViewDataBinding, VM: BaseViewModel>(
     private val viewModelClass: Class<VM>
 ): AppCompatActivity() {
 
-    private lateinit var binding: VB
+    protected lateinit var binding: VB
 
     protected val viewModel: VM
         get() = obtainViewModel(viewModelClass)
