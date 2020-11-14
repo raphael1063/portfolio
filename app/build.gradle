@@ -15,14 +15,31 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        buildFeatures {
-            dataBinding = true
-        }
+    }
+    buildFeatures {
+        dataBinding = true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
     }
 
     buildTypes {
+        def PROD_SERVER = "http://localhost:8088/api"
+        def TEST_SERVER = "http://localhost:8089/api"
         release {
             minifyEnabled false
+            buildConfigField("String", "SERVER_URL", "\"${PROD_SERVER}\"")
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+            buildConfigField("String", "SERVER_URL", "\"${TEST_SERVER}\"")
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
@@ -63,4 +80,7 @@ dependencies {
 
     /*Constraint Layout*/
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+
+    /*Timber*/
+    implementation 'com.jakewharton.timber:timber:4.7.1'
 }
