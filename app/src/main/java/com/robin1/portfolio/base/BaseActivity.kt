@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import com.robin1.portfolio.ext.obtainViewModel
+import com.robin1.portfolio.ext.toast
 
 abstract class BaseActivity<VB : ViewDataBinding, VM: BaseViewModel>(
     @LayoutRes
@@ -26,6 +27,21 @@ abstract class BaseActivity<VB : ViewDataBinding, VM: BaseViewModel>(
         start()
         setBinding()
         onObserve()
+    }
+
+    private fun onBaseObserve() {
+        viewModel.run {
+            toastResEvent.observe(this@BaseActivity, { event ->
+                event.getContentIfNotHandled()?.let { resId ->
+                    this@BaseActivity.toast(resId)
+                }
+            })
+            toastStringEvent.observe(this@BaseActivity, { event ->
+                event.getContentIfNotHandled()?.let {  message ->
+                    this@BaseActivity.toast(message)
+                }
+            })
+        }
     }
 
     abstract fun start()
