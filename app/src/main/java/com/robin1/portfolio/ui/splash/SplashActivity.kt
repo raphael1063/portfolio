@@ -16,12 +16,6 @@ class SplashActivity : BaseActivity<ActivitySplashBinding, SplashViewModel>(
     override fun start() {
     }
 
-    override fun setBinding() {
-        binding.apply {
-            vm = viewModel
-        }
-    }
-
     override fun onObserve() {
     }
 
