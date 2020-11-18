@@ -8,22 +8,27 @@
         <variable
             name="vm"
             type="com.robin1.portfolio.ui.home.HomeViewModel" />
+        <variable
+            name="model"
+            type="" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:background="@drawable/bg_home_item">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
+        <TextView
+            android:id="@+id/tv_home_menu_item"
+            style="@style/HomeItemText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:spanCount="3"
-            tools:listitem="@layout/item_home_subtitle" />
-
+            tools:text="RecyclerView" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
