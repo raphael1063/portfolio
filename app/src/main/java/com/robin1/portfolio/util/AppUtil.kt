@@ -13,6 +13,7 @@ object AppUtil {
             add(HomeItemModel(SUBTITLE, "Widget", "ImageView"))
             add(HomeItemModel(SUBTITLE, "Widget", "ScrollView"))
             add(HomeItemModel(SUBTITLE, "Widget", "RecyclerView"))
+            add(HomeItemModel(SUBTITLE, "Widget", "ViewPager"))
             add(HomeItemModel(SUBTITLE, "Widget", "WebView"))
             add(HomeItemModel(TITLE, "Library", null))
             add(HomeItemModel(SUBTITLE, "Library", "Glide"))
