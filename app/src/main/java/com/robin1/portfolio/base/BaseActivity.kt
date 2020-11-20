@@ -16,9 +16,9 @@ abstract class BaseActivity<VB : ViewDataBinding, VM: BaseViewModel>(
     private val viewModelClass: Class<VM>
 ): AppCompatActivity() {
 
-    private lateinit var binding: VB
+    protected lateinit var binding: VB
 
-    private val viewModel: VM
+    protected val viewModel: VM
         get() = obtainViewModel(viewModelClass)
 
     override fun onCreate(savedInstanceState: Bundle?) {
