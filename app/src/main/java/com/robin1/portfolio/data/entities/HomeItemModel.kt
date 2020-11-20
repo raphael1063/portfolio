@@ -2,7 +2,11 @@ package com.robin1.portfolio.data.entities
 
 data class HomeItemModel(
     /**
-     * Subject Title
+     * type: Title/SubTitle
      */
-    var subjectTitle : String
+    var type: HomeItemType,
+    /**
+     * Title of Subtitle
+     */
+    var title : String
 )

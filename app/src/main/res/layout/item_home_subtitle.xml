@@ -8,23 +8,25 @@
         <variable
             name="vm"
             type="com.robin1.portfolio.ui.home.HomeViewModel" />
+
         <variable
             name="model"
-            type="" />
+            type="com.robin1.portfolio.data.entities.HomeItemModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="4dp"
         android:background="@drawable/bg_home_item">
 
         <TextView
             android:id="@+id/tv_home_menu_item"
-            style="@style/HomeItemText"
+            style="@style/HomeItemTextRegular"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
+            android:text="@{model.title}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
