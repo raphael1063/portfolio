@@ -39,13 +39,8 @@ class HomeAdapter(private val viewModel: HomeViewModel) :
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         when (holder) {
-            is HomeTitleViewHolder -> {
-                (holder.itemView.layoutParams as StaggeredGridLayoutManager.LayoutParams).isFullSpan = true
-                holder.onBind(homeItemArray[position])
-            }
-            is HomeSubtitleViewHolder -> {
-                holder.onBind(homeItemArray[position])
-            }
+            is HomeTitleViewHolder -> holder.onBind(homeItemArray[position])
+            is HomeSubtitleViewHolder -> holder.onBind(homeItemArray[position])
         }
     }
 

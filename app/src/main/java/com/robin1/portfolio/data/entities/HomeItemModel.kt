@@ -6,7 +6,11 @@ data class HomeItemModel(
      */
     var type: HomeItemType,
     /**
-     * Title of Subtitle
+     * Title
      */
-    var title : String
+    var title : String,
+    /**
+     * Subtitle
+     */
+    var subtitle: String?
 )

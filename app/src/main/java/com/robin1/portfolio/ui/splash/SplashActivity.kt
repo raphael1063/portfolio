@@ -23,5 +23,4 @@ class SplashActivity : BaseActivity<ActivitySplashBinding, SplashViewModel>(
 
     override fun onObserve() {
     }
-
 }

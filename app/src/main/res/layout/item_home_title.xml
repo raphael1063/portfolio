@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
         <variable
             name="model"
             type="com.robin1.portfolio.data.entities.HomeItemModel" />
@@ -12,6 +11,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
+        android:paddingVertical="8dp"
+        app:homeItemModel="@{model}"
         android:layout_height="wrap_content">
 
         <TextView
@@ -21,6 +22,7 @@
             android:paddingHorizontal="20sp"
             android:layout_height="wrap_content"
             android:text="@{model.title}"
+            android:gravity="center"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

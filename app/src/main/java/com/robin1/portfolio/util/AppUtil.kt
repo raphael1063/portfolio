@@ -8,12 +8,14 @@ object AppUtil {
 
     fun getHomeItemList() : ArrayList<HomeItemModel> {
         return ArrayList<HomeItemModel>().apply {
-            add(HomeItemModel(TITLE, "Widget"))
-            add(HomeItemModel(SUBTITLE, "TextView"))
-            add(HomeItemModel(SUBTITLE, "ImageView"))
-            add(HomeItemModel(SUBTITLE, "ScrollView"))
-            add(HomeItemModel(SUBTITLE, "Recyclerview"))
-            add(HomeItemModel(SUBTITLE, "WebView"))
+            add(HomeItemModel(TITLE, "Widget", null))
+            add(HomeItemModel(SUBTITLE, "Widget", "TextView"))
+            add(HomeItemModel(SUBTITLE, "Widget", "ImageView"))
+            add(HomeItemModel(SUBTITLE, "Widget", "ScrollView"))
+            add(HomeItemModel(SUBTITLE, "Widget", "RecyclerView"))
+            add(HomeItemModel(SUBTITLE, "Widget", "WebView"))
+            add(HomeItemModel(TITLE, "Library", null))
+            add(HomeItemModel(SUBTITLE, "Library", "Glide"))
         }
     }
 }
